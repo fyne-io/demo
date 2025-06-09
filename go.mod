@@ -3,7 +3,7 @@ module fyne.io/demo
 go 1.19
 
 require (
-	fyne.io/fyne/v2 v2.6.0
+	fyne.io/fyne/v2 v2.6.1
 	github.com/alecthomas/chroma/v2 v2.15.0
 	github.com/stretchr/testify v1.10.0
 )
