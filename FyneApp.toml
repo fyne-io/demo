@@ -2,8 +2,8 @@
   Icon = "Icon.png"
   Name = "Fyne Demo"
   ID = "io.fyne.demo"
-  Version = "2.6.0"
-  Build = 1
+  Version = "2.6.1"
+  Build = 2
 
 [Source]
   Repo = "https://github.com/fyne-io/demo"
