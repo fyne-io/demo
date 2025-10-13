@@ -34,7 +34,8 @@ func highlightTextGrid(grid *widget.TextGrid) {
 
 	textColor := styleColor(chroma.Background, style)
 	grid.SetRowStyle(0, &widget.CustomTextGridStyle{
-		FGColor: textColor})
+		FGColor: textColor,
+	})
 	for _, tok := range iterator.Tokens() {
 		length := len(tok.Value)
 
@@ -43,7 +44,8 @@ func highlightTextGrid(grid *widget.TextGrid) {
 			col = 0
 
 			grid.SetRowStyle(row, &widget.CustomTextGridStyle{
-				FGColor: textColor})
+				FGColor: textColor,
+			})
 
 			continue
 		} else if tok.Value == "\t" {
