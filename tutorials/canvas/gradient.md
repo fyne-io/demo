@@ -22,7 +22,7 @@ grad := canvas.NewLinearGradient(color.NRGBA{0x80, 0, 0, 0xff}, color.NRGBA{0, 0
 
 ## RadialGradient
 
-A radial gradient draws the colour gradient from the center out to the perimiters with a circular draw.
+A radial gradient draws the colour gradient from the center out to the perimeters with a circular draw.
 For example:
 
 ```

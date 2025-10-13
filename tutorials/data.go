@@ -216,6 +216,7 @@ func makeNewTutorial(file string) fyne.CanvasObject {
 
 		codeID := (i - 1) / 2
 		preview := tutorial.code[codeID]()
+		propSize := fyne.NewSize(18, 18) // big enough for canvas elements to show, but smaller than most widgets
 
 		tools := widget.NewToolbar(
 			widget.NewToolbarAction(theme.ContentCopyIcon(), func() {
@@ -223,6 +224,7 @@ func makeNewTutorial(file string) fyne.CanvasObject {
 			}),
 			widget.NewToolbarAction(theme.MediaPlayIcon(), func() {
 				w := fyne.CurrentApp().NewWindow(tutorial.title + " preview")
+				w.Resize(propSize) // at least - next line will expand
 				w.SetContent(tutorial.code[codeID]())
 				w.Show()
 			}),
@@ -231,7 +233,7 @@ func makeNewTutorial(file string) fyne.CanvasObject {
 		style := styles.Get("solarized-dark")
 		bg := styleBackgroundColor(chroma.Background, style)
 		prop := canvas.NewRectangle(color.Transparent)
-		prop.SetMinSize(fyne.NewSize(18, 18)) // big enough for canvas elements to show, but smaller than most widgets
+		prop.SetMinSize(propSize)
 
 		details.Add(container.NewPadded(container.NewPadded(
 			container.NewStack(
