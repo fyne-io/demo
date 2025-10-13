@@ -1,21 +1,21 @@
 [Details]
-  Icon = "Icon.png"
-  Name = "Fyne Demo"
-  ID = "io.fyne.demo"
-  Version = "2.6.0"
-  Build = 1
-
-[Source]
-  Repo = "https://github.com/fyne-io/demo"
+Icon = "Icon.png"
+Name = "Fyne Demo"
+ID = "io.fyne.demo"
+Version = "2.7.1"
+Build = 25
 
 [Development]
-  HelperText = "This binary was built with debug symbols"
+HelperText = "This binary was built with debug symbols"
 
 [Release]
-  HelperText = "This binary was built without debug symbols"
+HelperText = "This binary was built without debug symbols"
+
+[Source]
+Repo = "https://github.com/fyne-io/demo"
 
 [LinuxAndBSD]
-  GenericName = "Toolkit Demo"
-  Categories = ["Development"]
-  Comment = "A demo of Fyne and its capabilities."
-  Keywords = ["demo", "fyne"]
+GenericName = "Toolkit Demo"
+Categories = ["Development"]
+Comment = "A demo of Fyne and its capabilities."
+Keywords = ["demo", "fyne"]
