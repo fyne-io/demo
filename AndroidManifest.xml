@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="67"
+    android:versionName="2.8.0"
+    package="io.fyne.demo">
+
+    <application
+        android:label="Fyne Demo"
+        android:debuggable="true">
+
+        <activity
+            android:name="org.golang.app.GoNativeActivity"
+            android:exported="true"
+            android:configChanges="0x2a0"
+            android:label="Fyne Demo">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="Fyne_Demo" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="org.golang.app.FyneNotificationReceiver"
+            android:exported="false" />
+
+        <service
+            android:name="org.golang.app.GoForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Keeps the demo clock running while the app is in the background" />
+        </service>
+    </application>
+
+    <uses-permission
+            android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission
+            android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission
+            android:name="android.permission.INTERNET" />
+
+    <uses-permission
+            android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <uses-permission
+            android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-permission
+            android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+</manifest>

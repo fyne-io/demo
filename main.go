@@ -3,9 +3,6 @@ package main
 
 import (
 	"fmt"
-	"log"
-	"net/url"
-
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/cmd/fyne_settings/settings"
@@ -13,6 +10,8 @@ import (
 	"fyne.io/fyne/v2/driver/desktop"
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
+	"log"
+	"net/url"
 
 	"fyne.io/demo/data"
 	"fyne.io/demo/tutorials"

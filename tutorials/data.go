@@ -4,6 +4,7 @@ package tutorials
 
 import (
 	"image/color"
+	"runtime"
 
 	"github.com/alecthomas/chroma/v2"
 	"github.com/alecthomas/chroma/v2/styles"
@@ -15,6 +16,18 @@ import (
 	"fyne.io/fyne/v2/theme"
 	"fyne.io/fyne/v2/widget"
 )
+
+func init() {
+	if runtime.GOOS == "android" {
+		Tutorials["foregroundService"] = Tutorial{
+			"Foreground Service",
+			"Demonstrates the use of a foreground service on Android.",
+			foregroundServiceScreen,
+		}
+
+		TutorialIndex[""] = append(TutorialIndex[""], "foregroundService")
+	}
+}
 
 // OnChangeFuncs is a slice of functions that can be registered
 // to run when the user switches tutorial.
